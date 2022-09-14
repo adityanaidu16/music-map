@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<html>
+   <body>
+      <div class = "map-container">
+         <img src="data:image/png;base64,{{ img_data }}",  style="width: 100%; height: auto; text-align: center; margin-top: -10%;"/>
+
+         <a href="{{ url_for('home') }}" type="button" class="btn btn-default" style="position: absolute; top: 5%; left: 5%; color: white;">HOME</a>
+      </div>
+   </body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+  <head>
+
+    <title>Spotify Music Taste Visualizer</title>
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/sticky_footer.css')}}">
+
+    <!-- Google fonts and icons -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  </head>
+
+  <body style="background-color: #D1D1CC;">
+
+    <div id="content">
+      {% block content %}{% endblock %}
+    </div>
+
+    <footer class="small text-center text-muted">
+      <div class="footer" style="background-color:#D1D1CC;">
+      Made by <a href="https://github.com/adityanaidu16/musicmap" target="_blank" style="color: #a19496">Aditya Naidu</a>.
+      Secure Authorization with <a href="https://developer.spotify.com/documentation/web-api/" target="_blank" style="color: #a19496">Spotify Web API</a>. View <a href="https://developer.spotify.com/terms/" target="_blank" style="color: #a19496">Spotify’s Terms of Use</a>.
+      </div>
+    </footer>
+
+  </body>
+
+</html>

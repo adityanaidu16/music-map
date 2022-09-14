@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script>
+
+  function progressfunction() {
+    var login = document.getElementById("visualize");
+    login.style.display = "none";
+
+    var progress = document.getElementById("progress")
+    progress.style.display = "block";
+
+    var loadingtext = document.getElementById("loadingtext")
+    loadingtext.style.display = "block";
+
+
+    var i = 0;
+    function move() {
+      if (i == 0) {
+        i = 1;
+        var elem = document.getElementById("progressbar");
+        var width = 10;
+        var id = setInterval(frame, 175);
+        function frame() {
+          if (width >= 100) {
+            clearInterval(id);
+            i = 0;
+          } else {
+            width++;
+            elem.style.width = width + "%";
+            elem.innerHTML = width + "%";
+          }
+          if (width >= 35) {
+            document.getElementById("loadingtext").innerHTML = "Analyzing listening history...";
+          }
+          if (width >= 60) {
+            document.getElementById("loadingtext").innerHTML = "Really?";
+          }
+          if (width >= 75) {
+            document.getElementById("loadingtext").innerHTML = "Here we go...";
+          }
+        }
+      }
+    }
+
+    move()
+    
+  }
+  
+</script>
+
+<div>
+  <a href="{{ url_for('home') }}" type="button" class="btn btn-default" style="position: absolute; top: 5%; left: 5%; color: white;">HOME</a>
+
+  <div id = "visualize" >
+    <h1 style="color: #2C1B14; padding-top: 8%; padding-bottom: 0%;">SPOTIFY MUSIC MAP</h1>
+    <div style="text-align: center; padding: 10%;">
+      <a href="{{ url_for('visualize') }}" type="button" onclick="progressfunction()" class="btn btn-default" style="color: white">VISUALIZE</a>
+    </div>
+    <p class="description" style="color: #2C1B14">
+      CLICK VISUALIZE TO VIEW YOUR MAPPED OUT MUSIC TASTE!
+    </p>
+  </div>
+
+  <div>
+    <div id="progress" class="progress" style="width: 60%; margin: auto; margin-top: 20%; display: none; background-color:#a176441f;">
+      <div id="progressbar" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+
+    <p id="loadingtext" class="d-flex" style="margin-left: 20%; display: none;">Authenticating..</p>
+  </div>
+
+  
+
+{% endblock %}
