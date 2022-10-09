@@ -34,6 +34,8 @@ flask run
 
 
 Resulting image:
+<br>
+
 ![Music Taste Visualization](/static/imgs/example.PNG)
 
 <br>
