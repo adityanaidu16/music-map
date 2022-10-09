@@ -25,15 +25,11 @@ app.secret_key = os.urandom(24)
 
 os.environ['CLIENT_ID'] = "ea31cee76f264dc996539e24958738f1"
 os.environ['SECRET_KEY'] = "f5569d0187ed4350b51850169f48fe7d"
-os.environ['SECRET_KEY'] = 'http://127.0.0.1:5000/callback/'
 
 client_id = os.environ.get("CLIENT_ID") 
 secret_key = os.environ.get("SECRET_KEY") 
-redirect_uri = os.environ.get("REDIRECT_URI")
 
 scope = "user-read-recently-played user-top-read"
-
-os.environ.get("client_id") 
 
 # ----------------------- AUTH API PROCEDURE -------------------------
 

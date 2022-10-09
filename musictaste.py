@@ -1,7 +1,11 @@
 import matplotlib.pyplot as plt
 import random
+import matplotlib
 from matplotlib import rcParams
+# import matplotlib.style as mplstyle
+# mplstyle.use('fast')
 import io
+import time
 
 def random_color():
     r = lambda: random.randint(135,255)
@@ -10,6 +14,7 @@ def random_color():
 def main(sp, recently_played_json, short_artists_json, med_artists_json, long_artists_json):
     genres=[]
     recentlyplayed = []
+    currenttime = time.time()
 
     # open json objects with Spotify artist/genre data
     for i in short_artists_json[0]['items']:
