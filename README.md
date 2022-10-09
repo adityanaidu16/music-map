@@ -30,7 +30,7 @@ flask run
 ## APP
 <br>
 
-![Music Taste Visualization](/static/imgs/demo.gif)
+![Music Taste Visualization](/static/imgs/demo2.gif)
 
 
 Resulting image:
