@@ -18,11 +18,13 @@ python3 -m venv .venv
 pip install -r requirements.txt
 ```
 ## RUN
-1.) Set app.py to flask app
+1.) Set Spotify API 'CLIENT_ID' and 'SECRET_KEY' environment variables
+
+2.) Set app.py to flask app
 ```
 set FLASK_APP=app.py
 ```
-2.) Run app by running the app.py file or by running the flask app through the terminal
+3.) Run app by running the app.py file or by running the flask app through the terminal
 ```
 flask run
 ```
