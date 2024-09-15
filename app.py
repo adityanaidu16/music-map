@@ -23,9 +23,6 @@ Session(app)
 
 app.secret_key = os.urandom(24)
 
-os.environ['CLIENT_ID'] = "ea31cee76f264dc996539e24958738f1"
-os.environ['SECRET_KEY'] = "f5569d0187ed4350b51850169f48fe7d"
-
 client_id = os.environ.get("CLIENT_ID") 
 secret_key = os.environ.get("SECRET_KEY") 
 
